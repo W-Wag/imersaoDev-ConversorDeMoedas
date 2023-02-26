@@ -7,7 +7,14 @@ function conversorEmReal() {
   document.getElementById("saida");
   const valorEmReal = cotacaoDoDolar * input;
 
-  saida.innerHTML += `<p> ${input}$ esta a R$${valorEmReal} </p>`;
+  if (input.length === 0) {
+    alert("Digite um numero antes");
+    return;
+  }
+
+  limpaHistorico();
+
+  saida.innerHTML += `<p> ${input}$ esta a R$${valorEmReal.toFixed(2)} </p>`;
 }
 
 function conversorEmDolar() {
@@ -19,7 +26,11 @@ function conversorEmDolar() {
     alert("Digite um numero antes");
     return;
   }
-  saida.innerHTML += `<p> R$${input} esta a ${valorEmDolar}$ </p>`;
+
+  limpaHistorico();
+
+  saida.innerHTML += `<p> R$${input} esta a ${valorEmDolar.toFixed(2)}$ </p>`;
+  
 }
 
 function conversorDeBitcoin() {
@@ -32,5 +43,17 @@ function conversorDeBitcoin() {
     return;
   }
 
+  limpaHistorico();
+
   saida.innerHTML += `<p> R$${input} esta a ${valorEmBitcoin} BTC </p>`;
+  
+  
+
 }
+
+function limpaHistorico() {
+  if(saida.childElementCount > 2) {
+    saida.innerHTML = '';
+  }
+}
+
