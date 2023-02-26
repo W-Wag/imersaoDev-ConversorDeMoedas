@@ -6,7 +6,7 @@ body {
     background-size: cover;
     background-position: center top;
     background-repeat: no-repeat;
-    height: 96.9vh;
+    height: 98vh;
   }
   
   .container {
@@ -31,7 +31,7 @@ body {
   .alura-logo {
     width: 40px;
     position: absolute;
-    top: 10px;
+    top: -100px;
     right: 10px;
   }
   
@@ -40,7 +40,7 @@ body {
   }
   
   img {
-    max-height: 250px;
+    height: 30%;
   }
   input {
     display: block;
