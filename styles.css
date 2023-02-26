@@ -6,7 +6,7 @@ body {
     background-size: cover;
     background-position: center top;
     background-repeat: no-repeat;
-    height: 100vh;
+    height: 95vh;
   }
   
   .container {
@@ -60,7 +60,7 @@ body {
     color: white;
   }
   #saida {
-    width: 600px;
+    width: 50%;
     margin: auto;
     background-color: white;
     font-family: Arial;
