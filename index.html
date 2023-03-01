@@ -21,11 +21,28 @@
   <button type='submit' onclick='conversorEmDolar()'> Converter de Real para Dolar </button>
   <button type='submit' onclick='conversorDeBitcoin()'> Converter de Real para Bitcoin </button>
 </div>
+<img src="https://caelum-online-public.s3.amazonaws.com/assets-imersaodev/Convers%C3%A3o+1.png">
 
 <h2>Histórico de conversão:</h2>
-<div id="saida"> </div>
+<button id="myBtn">Abrir histórico</button>
 
-<img src="https://caelum-online-public.s3.amazonaws.com/assets-imersaodev/Convers%C3%A3o+1.png">
+
+
+<div id="myModal" class="modal">
+
+  
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <p>Todas as conversões de moeda ficarão abaixo:</p>
+    <div id="saida"> </div>
+  </div>
+
+
+</div>
+
+
+
+
     
 </body>
 <script src="script.js"></script>

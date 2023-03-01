@@ -1,6 +1,9 @@
 const cotacaoDoDolar = 5.27;
 const cotacaoDoReal = 0.19;
 const cotacaoDoBitCoinEmReal = 116097.9;
+const modal = document.getElementById("myModal");
+const  btn = document.getElementById("myBtn");
+const  span = document.getElementsByClassName("close")[0]
 
 function conversorEmReal() {
   const input = document.getElementById("input").value;
@@ -12,7 +15,6 @@ function conversorEmReal() {
     return;
   }
 
-  limpaHistorico();
 
   saida.innerHTML += `<p> ${input}$ esta a R$${valorEmReal.toFixed(2)} </p>`;
 }
@@ -27,7 +29,7 @@ function conversorEmDolar() {
     return;
   }
 
-  limpaHistorico();
+  
 
   saida.innerHTML += `<p> R$${input} esta a ${valorEmDolar.toFixed(2)}$ </p>`;
   
@@ -43,7 +45,6 @@ function conversorDeBitcoin() {
     return;
   }
 
-  limpaHistorico();
 
   saida.innerHTML += `<p> R$${input} esta a ${valorEmBitcoin} BTC </p>`;
   
@@ -51,9 +52,24 @@ function conversorDeBitcoin() {
 
 }
 
-function limpaHistorico() {
-  if(saida.childElementCount > 2) {
-    saida.innerHTML = '';
+
+;
+
+
+btn.onclick = function() {
+  modal.style.display = "block";
+}
+
+
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
   }
 }
+
 
