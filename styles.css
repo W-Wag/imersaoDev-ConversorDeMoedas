@@ -1,3 +1,14 @@
+@media screen and (min-width:300px) and (max-width: 700px) {
+  #moedas{
+    margin: 0px;
+    width: 0px;
+    height: 0px;
+  }
+  body{
+    overflow: hidden;
+  }
+}
+
 body {
     font-family: "Roboto Mono", monospace;
     text-align: center;
